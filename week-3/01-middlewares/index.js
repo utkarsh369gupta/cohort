@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-// app.use(express.json())
 
 app.get('/check-kidneys', function (req, res) {
     const username = req.headers.username;
@@ -24,6 +23,7 @@ app.get('/check-kidneys', function (req, res) {
         "msg": "everthing seems fine!!"
     })
 })
+// http://localhost:3000/check-kidneys?kidneyID=1
 
 
 
@@ -55,7 +55,7 @@ function kidneyMiddleware(req, res, next) {
     }
 }
 
-// app.use(express.json())
+// // app.use(express.json())
 
 app.post("/health-checkup",express.json(), function(req, res){
     const kidneys = req.body.kidneys
@@ -78,8 +78,20 @@ app.use(function (err, req, res, next) {
 })
 
 
-
-
 app.listen(port, function () {
     console.log(`server is operating at ${port} port.`)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
