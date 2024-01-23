@@ -1,0 +1,26 @@
+<html>
+
+<script>
+    function getsum() {
+        const a = document.getElementById("number1").value;
+        const b = document.getElementById("number2").value;
+        const element = document.getElementById("calculate")
+        element.innerHTML = parseInt(a) + parseInt(b);
+    }
+</script>
+
+<body>
+    <div>
+        <input oninput="getsum()" id="number1" type="text" placeholder="First Number">
+    </div><br>
+    <div>
+        <input oninput="getsum()" id="number2" type="text" placeholder="Second Number">
+    </div><br>
+    <!-- <div>
+        <button onclick="getsum()">Calculate Sum</button>
+    </div><br> -->
+    <div id="calculate"></div>
+
+</body>
+
+</html>
